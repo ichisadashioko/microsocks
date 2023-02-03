@@ -32,4 +32,3 @@ $(PROG): $(OBJS)
 	$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o $@
 
 .PHONY: all clean install
-

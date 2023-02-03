@@ -46,4 +46,3 @@ int server_waitclient(struct server *server, struct client* client);
 int server_setup(struct server *server, const char* listenip, unsigned short port);
 
 #endif
-

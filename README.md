@@ -62,4 +62,3 @@ Supported SOCKS5 Features
 - authentication: none, password, one-time
 - IPv4, IPv6, DNS
 - TCP (no UDP at this time)
-
