@@ -5,7 +5,7 @@ jobs:
     runs-on: windows-latest
     steps:
     - uses: actions/checkout@v2
-    - run: tree .
+    - run: tree . /a /f
     - uses: msys2/setup-msys2@v2
       with:
         update: true
@@ -19,3 +19,7 @@ jobs:
     - shell: msys2 {0} # {0} is probably the current directory
       run: make
     - run: tree .
+    - uses: actions/upload-artifact@v2
+      with:
+        name: microsocks-msys2_${{ github.sha }}
+        path: microsocks.exe

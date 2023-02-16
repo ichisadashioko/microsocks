@@ -29,6 +29,6 @@ clean:
 	$(CC) $(CPPFLAGS) $(CFLAGS) $(INC) $(PIC) -c -o $@ $<
 
 $(PROG): $(OBJS)
-	$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o $@
+	$(CC) $(LDFLAGS) $(OBJS) $(LIBS) -o $@ -static
 
 .PHONY: all clean install
