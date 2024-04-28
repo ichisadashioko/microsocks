@@ -19,9 +19,13 @@ jobs:
     - shell: msys2 {0} # {0} is probably the current directory
       run: make
     - run: tree . /a /f
-    - run: where msys-2.0.dll
     - run: which msys-2.0.dll
+    - run: cp /bin/msys-2.0.dll ./
+    - run: ls -la
+    - run: tree . /a /f
     - uses: actions/upload-artifact@v2
       with:
         name: microsocks-msys2_${{ github.sha }}
-        path: microsocks.exe
+        path: |
+          microsocks.exe
+          msys-2.0.dll
