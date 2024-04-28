@@ -18,7 +18,9 @@ jobs:
       run: uname -a
     - shell: msys2 {0} # {0} is probably the current directory
       run: make
-    - run: tree .
+    - run: tree . /a /f
+    - run: where msys-2.0.dll
+    - run: which msys-2.0.dll
     - uses: actions/upload-artifact@v2
       with:
         name: microsocks-msys2_${{ github.sha }}
